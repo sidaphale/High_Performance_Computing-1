@@ -1,0 +1,48 @@
+#!/bin/sh
+#SBATCH --partition=general-compute --qos=general-compute
+#SBATCH --time=00:60:00
+#SBATCH --constraint=IB
+#SBATCH --exclusive
+#SBATCH --nodes=10
+#SBATCH --ntasks-per-node=12
+#SBATCH --mem=24000
+# Memory per node specification is in MB. It is optional.
+# The default limit is 3GB per core.
+#SBATCH --job-name="p3_p"
+#SBATCH --output=p3_p.out
+#SBATCH --mail-user=saphale@buffalo.edu
+#SBATCH --mail-type=ALL
+#SBATCH --requeue
+#Specifies that the job will be requeued after a node failure.
+#The default is that the job will not be requeued.
+
+echo "SLURM_JOBID="$SLURM_JOBID
+echo "SLURM_JOB_NODELIST"=$SLURM_JOB_NODELIST
+echo "SLURM_NNODES"=$SLURM_NNODES
+echo "SLURMTMPDIR="$SLURMTMPDIR
+
+cd $SLURM_SUBMIT_DIR
+echo "working directory = "$SLURM_SUBMIT_DIR
+
+
+module load intel/16.0
+module load intel-mpi/5.1.1
+module list
+ulimit -s unlimited
+#
+
+NPROCS='srun --nodes=${SLURM_NNODES} bash -c 'hostname' | wc-l'
+echo NPROCS=$NPROCS
+echo "p3_p"
+export I_MPI_PMI_LIBRARY=/usr/lib64/libpmi.so
+
+mpiicpc -Wall -o p3_p p3_p.cpp
+
+srun -n $SLURM_NPROCS ./p3_p
+
+echo "All compiled"
+
+
+#
+echo "All Done"
+

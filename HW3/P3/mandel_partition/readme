@@ -1,0 +1,2 @@
+MPI implementation with partitioning the MPI_COMM_WORLD to create new communicator
+Workload splitting and distribution

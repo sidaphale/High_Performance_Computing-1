@@ -1,0 +1,15 @@
+SLURM_JOBID=5994716
+SLURM_JOB_NODELIST=cpn-k08-28-01,cpn-k11-34-02,cpn-k11-37-02,cpn-k11-41-[01-02],cpn-k13-40-02,cpn-k14-13-02,cpn-k16-02-02
+SLURM_NNODES=8
+SLURMTMPDIR=/scratch/5994716
+working directory = /user/saphale/hpc/homework/hw3/p3
+
+Currently Loaded Modules:
+  1) lmod/6.0.1   2) StdEnv   3) intel/16.0   4) intel-mpi/5.1.1
+
+NPROCS=srun --nodes=${SLURM_NNODES} bash -c hostname | wc-l
+p3_p
+Sum1 of individual processor = 0.753188
+Global sum = 1.50638
+All compiled
+All Done

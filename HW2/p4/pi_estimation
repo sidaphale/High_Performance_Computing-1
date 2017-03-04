@@ -1,0 +1,2 @@
+Study of serial code performance vs OpenMP performace. Various scheduling strategies study
+Strong scaling study and Karp-Flatt metric calculation

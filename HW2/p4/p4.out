@@ -1,0 +1,10 @@
+SLURM_JOBID=5932286
+SLURM_JOB_NODELIST=cpn-k08-38-02
+SLURM_NNODES=1
+SLURMTMPDIR=/scratch/5932286
+working directory = /user/saphale/hpc/homework/hw2/p4/omp
+
+Currently Loaded Modules:
+  1) lmod/6.0.1   2) StdEnv   3) gcc/5.4.0   4) intel/16.0   5) papi/5.4.3
+
+p4

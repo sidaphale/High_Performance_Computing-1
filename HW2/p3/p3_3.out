@@ -1,0 +1,16 @@
+SLURM_JOBID=5924213
+SLURM_JOB_NODELIST=cpn-k07-04-01
+SLURM_NNODES=1
+SLURMTMPDIR=/scratch/5924213
+working directory = /user/saphale/hpc/homework/hw2/p3
+
+Currently Loaded Modules:
+  1) lmod/6.0.1   2) StdEnv   3) gcc/4.9.2   4) intel/16.0   5) papi/5.4.3
+
+p3
+srun: Warning: can't honor --ntasks-per-node set to 8 which doesn't match the requested tasks 1 with the number of requested nodes 1.  Ignoring --ntasks-per-node.
+0.00711429
+L1 cache misses = 205
+L2 cache misses = 74
+All compiled
+All Done

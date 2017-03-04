@@ -1,0 +1,53 @@
+#!/bin/sh
+##SBATCH --partition=general-compute
+#SBATCH --time=00:10:00
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=8
+##SBATCH --mem=24000
+# Memory per node specification is in MB. It is optional.
+# The default limit is 3GB per core.
+#SBATCH --job-name="p3"
+#SBATCH --output=p3.out
+#SBATCH --mail-user=saphale@buffalo.edu
+#SBATCH --mail-type=ALL
+#SBATCH --requeue
+##SBATCH --constraint=IB
+#Specifies that the job will be requeued after a node failure.
+#The default is that the job will not be requeued.
+
+echo "SLURM_JOBID="$SLURM_JOBID
+echo "SLURM_JOB_NODELIST"=$SLURM_JOB_NODELIST
+echo "SLURM_NNODES"=$SLURM_NNODES
+echo "SLURMTMPDIR="$SLURMTMPDIR
+
+cd $SLURM_SUBMIT_DIR
+echo "working directory = "$SLURM_SUBMIT_DIR
+
+module load gcc
+module load intel
+module list
+ulimit -s unlimited
+#
+
+echo "p3"
+export I_MPI_PMI_LIBRARY=/usr/lib64/libpmi.so
+
+make all
+
+srun -n 1 ./Run1
+
+srun -n 1 ./Run2
+
+srun -n 1 ./Run3
+
+srun -n 1 ./Run4
+
+
+echo "All compiled"
+
+
+#
+echo "All Done"
+
+
+

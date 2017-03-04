@@ -1,0 +1,17 @@
+SLURM_JOBID=5980865
+SLURM_JOB_NODELIST=cpn-k07-01-[01-02],cpn-k07-02-[01-02],cpn-k07-03-02,cpn-k07-04-[01-02],cpn-k07-05-01,cpn-k07-08-01,cpn-k16-07-02
+SLURM_NNODES=10
+SLURMTMPDIR=/scratch/5980865
+working directory = /user/saphale/hpc/homework/hw3/p2
+
+Currently Loaded Modules:
+  1) lmod/6.0.1   2) StdEnv   3) intel/16.0   4) intel-mpi/5.1.1
+
+NPROCS=srun --nodes=${SLURM_NNODES} bash -c hostname | wc-l
+p2
+MPI code with tasks = 120
+Number of divisions = 2000000000
+pi = 3.14159
+time = 0.104361
+All compiled
+All Done

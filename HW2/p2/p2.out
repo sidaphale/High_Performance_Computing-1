@@ -1,0 +1,18 @@
+SLURM_JOBID=5929219
+SLURM_JOB_NODELIST=cpn-f16-26
+SLURM_NNODES=1
+SLURMTMPDIR=/scratch/5929219
+working directory = /user/saphale/hpc/homework/hw2/p2
+
+Currently Loaded Modules:
+  1) lmod/6.0.1   2) StdEnv   3) gcc/5.4.0   4) intel/16.0   5) papi/5.4.3
+
+p2
+p2.cpp: In function ‘int main(int, char**)’:
+p2.cpp:27:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int l = 0; l < N.size(); l++)
+                     ^
+Time required = 57.6277
+Area of the Mandelbrot set = 1.50734
+All compiled
+All Done

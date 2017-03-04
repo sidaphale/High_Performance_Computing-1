@@ -1,0 +1,40 @@
+SLURM_JOBID=5932287
+SLURM_JOB_NODELIST=cpn-k10-06-02
+SLURM_NNODES=1
+SLURMTMPDIR=/scratch/5932287
+working directory = /user/saphale/hpc/homework/hw2/p4/omp
+
+Currently Loaded Modules:
+  1) lmod/6.0.1   2) StdEnv   3) gcc/5.4.0   4) intel/16.0   5) papi/5.4.3
+
+p4s
+p4static.cpp: In function ‘int main(int, char**)’:
+p4static.cpp:19:10: warning: unused variable ‘tid’ [-Wunused-variable]
+   int k, tid=0;
+          ^
+
+pi: 3.14159
+
+pi: 3.14159
+
+pi: 3.14159
+
+pi: 3.14159
+
+pi: 3.14159
+
+pi: 3.14159
+
+pi: 3.14159
+
+pi: 3.14159
+
+pi: 3.14159
+
+pi: 3.14159
+
+pi: 3.14159
+
+pi: 3.14159
+All compiled
+All Done

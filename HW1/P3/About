@@ -1,0 +1,3 @@
+Study of matrix addition timings
+20000 x 20000 matrix addition with first loop over rows and then comparision with first loop over column
+Study of various optimization techniques

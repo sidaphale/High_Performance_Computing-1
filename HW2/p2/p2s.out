@@ -1,0 +1,32 @@
+SLURM_JOBID=5929150
+SLURM_JOB_NODELIST=cpn-f16-26
+SLURM_NNODES=1
+SLURMTMPDIR=/scratch/5929150
+working directory = /user/saphale/hpc/homework/hw2/p2
+
+Currently Loaded Modules:
+  1) lmod/6.0.1   2) StdEnv   3) gcc/5.4.0   4) intel/16.0   5) papi/5.4.3
+
+p2s
+p2static.cpp: In function ‘int main(int, char**)’:
+p2static.cpp:25:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int l = 0; l < N.size(); l++)
+                     ^
+Area of Mandelbrot set = 1.50734
+Area of Mandelbrot set = 1.50734
+Area of Mandelbrot set = 1.50727
+Area of Mandelbrot set = 1.50734
+Area of Mandelbrot set = 1.5074
+Area of Mandelbrot set = 1.5074
+Area of Mandelbrot set = 1.50734
+Area of Mandelbrot set = 1.5074
+Area of Mandelbrot set = 1.50734
+Area of Mandelbrot set = 1.5074
+Area of Mandelbrot set = 1.50759
+Area of Mandelbrot set = 1.50746
+Area of Mandelbrot set = 1.50689
+Area of Mandelbrot set = 1.50734
+Area of Mandelbrot set = 1.50727
+Area of Mandelbrot set = 1.50772
+All compiled
+All Done

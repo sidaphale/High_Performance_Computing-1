@@ -1,0 +1,53 @@
+#!/bin/sh
+##SBATCH --partition=general-compute
+#SBATCH --time=00:10:00
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=8
+##SBATCH --mem=24000
+# Memory per node specification is in MB. It is optional.
+# The default limit is 3GB per core.
+#SBATCH --job-name="p4"
+#SBATCH --output=p4.out
+#SBATCH --mail-user=saphale@buffalo.edu
+#SBATCH --mail-type=ALL
+#SBATCH --requeue
+##SBATCH --constraint=IB
+#Specifies that the job will be requeued after a node failure.
+#The default is that the job will not be requeued.
+
+echo "SLURM_JOBID="$SLURM_JOBID
+echo "SLURM_JOB_NODELIST"=$SLURM_JOB_NODELIST
+echo "SLURM_NNODES"=$SLURM_NNODES
+echo "SLURMTMPDIR="$SLURMTMPDIR
+
+cd $SLURM_SUBMIT_DIR
+echo "working directory = "$SLURM_SUBMIT_DIR
+
+module load intel
+module load gcc
+module load mkl/11.3
+module list
+ulimit -s unlimited
+#
+
+echo "p4l1blas"
+export LD_LIBRARY_PATH=/util/common/octave/OpenBLAS-0.2.14/lib
+
+make all
+
+
+srun -n 1 ./Run1
+
+srun -n 1 ./Run2
+
+srun -n 1 ./Run3
+
+
+echo "All compiled"
+
+
+#
+echo "All Done"
+
+
+

@@ -1,0 +1,25 @@
+SLURM_JOBID=5925795
+SLURM_JOB_NODELIST=cpn-d09-31-02
+SLURM_NNODES=1
+SLURMTMPDIR=/scratch/5925795
+working directory = /user/saphale/hpc/homework/hw2/p2
+
+Currently Loaded Modules:
+  1) lmod/6.0.1   2) StdEnv   3) gcc/5.4.0   4) intel/16.0   5) papi/5.4.3
+
+p2
+srun: Warning: can't honor --ntasks-per-node set to 8 which doesn't match the requested tasks 1 with the number of requested nodes 1.  Ignoring --ntasks-per-node.
+Time required = 0.763697
+Area of the Mandelbrot set = 1.48883
+L1 cache misses = 14351L2 cache misses = 1530
+Time required = 19.1544
+Area of the Mandelbrot set = 1.50734
+L1 cache misses = 454042L2 cache misses = 70260
+Time required = 76.7102
+Area of the Mandelbrot set = 1.50599
+L1 cache misses = 1838824L2 cache misses = 350202
+Time required = 172.793
+Area of the Mandelbrot set = 1.50684
+L1 cache misses = 4443980L2 cache misses = 836718
+All compiled
+All Done
